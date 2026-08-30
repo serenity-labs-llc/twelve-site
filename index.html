@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Twelve — Find a S-fellowship meeting today</title>
+  <meta name="description" content="Discover 300+ twelve-step meetings, in person, on Zoom, and by phone for porn, sex, and love addiction." />
+  <style>
+    @font-face {
+      font-family: "Inter Display";
+      src: url("assets/InterDisplay-SemiBold.woff2") format("woff2");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Inter";
+      src: url("assets/Inter-Medium.woff2") format("woff2");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+      background: #f3f7d2;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .page {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Logo — top 70 / left 72, 156x40 */
+    .logo {
+      position: absolute;
+      top: 70px;
+      left: 72px;
+      width: 156px;
+      height: 40px;
+    }
+    .logo .mark {
+      position: absolute;
+      left: 0; top: 0;
+      width: 40px; height: 40px;
+    }
+    .logo .wordmark {
+      position: absolute;
+      left: 50.65px;
+      top: 7.73px;
+      width: 103.19px;
+      height: 24.58px;
+    }
+
+    /* Hero — left 72, vertically centered, 593 wide, column gap 21 */
+    .hero {
+      position: absolute;
+      left: 72px;
+      top: calc(50% + 0.5px);
+      transform: translateY(-50%);
+      width: 593px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 21px;
+    }
+
+    .badges {
+      display: flex;
+      gap: 11px;
+      align-items: center;
+    }
+    .badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 1000px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      flex-shrink: 0;
+    }
+    .badge img { display: block; }
+    .badge.saa  { background: #6fbf8b; }
+    .badge.slaa { background: #d66ba0; }
+    .badge.sa   { background: #e8e6e1; }
+    .badge.sra  { background: #d08b5b; }
+    .badge.sca  { background: #7b8cde; }
+    .badge.saa  img { width: 31.906px; height: 11.836px; }
+    .badge.slaa img { width: 36.107px; height: 10.356px; }
+    .badge.sa   img { width: 20.531px; height: 11.836px; }
+    .badge.sra  img { width: 31.406px; height: 11.836px; }
+    .badge.sca  img { width: 31.906px; height: 11.836px; }
+
+    h1 {
+      font-family: "Inter Display", "Inter", sans-serif;
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 66px;
+      color: #000;
+      word-break: break-word;
+    }
+
+    .subhead {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: normal;
+      color: #000;
+      opacity: 0.6;
+      word-break: break-word;
+    }
+
+    .app-store {
+      display: block;
+      height: 48px;
+      width: auto;
+    }
+    .app-store img {
+      display: block;
+      height: 48px;
+      width: auto;
+    }
+
+    /* iPhone — pinned bottom-right, overflowing edges */
+    .phone {
+      position: absolute;
+      right: -12px;
+      bottom: -23.34px;
+      width: 532px;
+      height: 982.34px;
+      pointer-events: none;
+    }
+    .phone img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ---------- Mobile ---------- */
+    @media (max-width: 1100px) {
+      .page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: visible;
+        padding: 120px 24px 0;
+      }
+      .logo { left: 24px; top: 32px; }
+      .hero {
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: 593px;
+        align-items: center;
+        text-align: center;
+        margin-top: 24px;
+      }
+      h1 { font-size: 44px; line-height: 48px; }
+      .subhead { font-size: 18px; }
+      .phone {
+        position: static;
+        width: min(420px, 88vw);
+        height: auto;
+        aspect-ratio: 532 / 982.34;
+        margin-top: 48px;
+        margin-bottom: -12vw;
+      }
+      .phone img { position: static; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <a class="logo" href="/" aria-label="Twelve">
+      <img class="mark" src="assets/logo-mark.png" alt="Twelve logo" />
+      <img class="wordmark" src="assets/wordmark.svg" alt="Twelve" />
+    </a>
+
+    <section class="hero">
+      <div class="badges" aria-label="Programs: SAA, SLAA, SA, SRA, SCA">
+        <div class="badge saa"><img src="assets/saa.svg" alt="SAA" /></div>
+        <div class="badge slaa"><img src="assets/slaa.svg" alt="SLAA" /></div>
+        <div class="badge sa"><img src="assets/sa.svg" alt="SA" /></div>
+        <div class="badge sra"><img src="assets/sra.svg" alt="SRA" /></div>
+        <div class="badge sca"><img src="assets/sca.svg" alt="SCA" /></div>
+      </div>
+
+      <h1>Find a S&#8209;fellowship meeting&nbsp;today</h1>
+
+      <p class="subhead">Discover 300+ twelve-step meetings, in person, on Zoom, and by phone for porn, sex, and love addiction</p>
+
+      <a class="app-store" href="https://apps.apple.com/app/id6805293686" aria-label="Download on the App Store">
+        <img src="assets/app-store-badge.svg" alt="Download on the App Store" />
+      </a>
+    </section>
+
+    <div class="phone">
+      <img src="assets/iphone.png" alt="Twelve app showing a list of meetings" />
+    </div>
+  </main>
+</body>
+</html>
