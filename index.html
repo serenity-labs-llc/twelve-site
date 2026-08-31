@@ -128,13 +128,16 @@
       width: auto;
     }
 
-    /* iPhone — pinned bottom-right, overflowing edges */
+    /* iPhone — pinned bottom-right, overflowing edges.
+       PNG is trimmed to the phone body (1078x2201); margins from the old
+       Figma export are re-created via right/bottom offsets, and the shadow
+       is CSS so it never crops. */
     .phone {
       position: absolute;
-      right: -12px;
-      bottom: -23.34px;
-      width: 532px;
-      height: 982.34px;
+      right: 99px;
+      bottom: 152px;
+      width: 368px;
+      height: 752px;
       pointer-events: none;
     }
     .phone img {
@@ -143,6 +146,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      filter: drop-shadow(28px 32px 56px rgba(0, 0, 0, 0.35));
     }
 
     /* Footer — pinned bottom, logo left + links right */
@@ -198,11 +202,11 @@
       .subhead { font-size: 18px; }
       .phone {
         position: static;
-        width: min(420px, 88vw);
+        width: min(291px, 61vw);
         height: auto;
-        aspect-ratio: 532 / 982.34;
+        aspect-ratio: 1078 / 2201;
         margin-top: 48px;
-        margin-bottom: 0;
+        margin-bottom: 40px;
       }
       .phone img { position: static; }
 
