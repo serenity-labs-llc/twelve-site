@@ -145,6 +145,36 @@
       object-fit: cover;
     }
 
+    /* Footer — pinned bottom, logo left + links right */
+    .site-footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0 72px 54px;
+      z-index: 2;
+    }
+    .site-footer .credits {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1500px;
+    }
+    .footer-logo { position: relative; width: 124.8px; height: 32px; display: block; }
+    .footer-logo .mark { position: absolute; left: 0; top: 0; width: 32px; height: 32px; }
+    .footer-logo .wordmark { position: absolute; left: 40.52px; top: 6.19px; width: 82.55px; height: 19.66px; }
+    .footer-links {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      font-size: 11px;
+      line-height: 1.4;
+      color: rgba(0, 0, 0, 0.5);
+      white-space: nowrap;
+    }
+    .footer-links a { color: inherit; text-decoration: none; }
+    .footer-links a:hover { text-decoration: underline; }
+
     /* ---------- Mobile ---------- */
     @media (max-width: 1100px) {
       .page {
@@ -172,9 +202,21 @@
         height: auto;
         aspect-ratio: 532 / 982.34;
         margin-top: 48px;
-        margin-bottom: -12vw;
+        margin-bottom: 0;
       }
       .phone img { position: static; }
+
+      .site-footer {
+        position: static;
+        padding: 40px 16px;
+        width: 100%;
+      }
+      .site-footer .credits {
+        flex-direction: column-reverse;
+        gap: 39px;
+        align-items: center;
+      }
+      .footer-links { width: 100%; justify-content: space-between; gap: 0; }
     }
   </style>
 </head>
@@ -206,6 +248,20 @@
     <div class="phone">
       <img src="assets/iphone.png" alt="Twelve app showing a list of meetings" />
     </div>
+
+    <footer class="site-footer">
+      <div class="credits">
+        <a class="footer-logo" href="/" aria-label="Twelve home">
+          <img class="mark" src="assets/logo-mark.png" alt="" />
+          <img class="wordmark" src="assets/wordmark.svg" alt="Twelve" />
+        </a>
+        <div class="footer-links">
+          <a href="/terms-conditions">Terms &amp; Conditions</a>
+          <a href="/privacy">Privacy Policy</a>
+          <span>All Rights Reserved</span>
+        </div>
+      </div>
+    </footer>
   </main>
 </body>
 </html>

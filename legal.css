@@ -1,0 +1,127 @@
+/* Shared styles for Twelve legal pages */
+@font-face {
+  font-family: "Inter";
+  src: url("assets/Inter-Regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("assets/Inter-Medium.woff2") format("woff2");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("assets/Inter-SemiBold.woff2") format("woff2");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("assets/Inter-Bold.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Inter Display";
+  src: url("assets/InterDisplay-Medium.woff2") format("woff2");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #f3f7d2;
+  color: #000;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.legal-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 72px;
+}
+
+.logo {
+  display: inline-block;
+  position: relative;
+  margin-top: 70px;
+  width: 156px;
+  height: 40px;
+}
+.logo .mark { position: absolute; left: 0; top: 0; width: 40px; height: 40px; }
+.logo .wordmark { position: absolute; left: 50.65px; top: 7.73px; width: 103.19px; height: 24.58px; }
+
+h1 {
+  font-family: "Inter Display", "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 98px;
+  line-height: 1;
+  margin-top: 60px; /* logo bottom (110) -> h1 top (170) */
+  word-break: break-word;
+}
+
+.legal-content {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 80px;
+}
+
+.intro { font-size: 16px; line-height: 22px; }
+.intro p + p { margin-top: 22px; }
+
+section { display: flex; flex-direction: column; gap: 20px; }
+section h2 { font-weight: 500; font-size: 24px; line-height: 1; }
+section p, section li { font-size: 16px; line-height: 22px; }
+section p + p, section ul + p, section p + ul { margin-top: 22px; }
+section ul { list-style: disc; padding-left: 24px; }
+section .subhead-bold { font-weight: 600; }
+section .bold { font-weight: 700; }
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  width: 100%;
+}
+
+footer {
+  padding: 0 72px 54px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+footer .credits {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1500px;
+  width: 100%;
+}
+footer .footer-logo { position: relative; width: 124.8px; height: 32px; display: block; }
+footer .footer-logo .mark { position: absolute; left: 0; top: 0; width: 32px; height: 32px; }
+footer .footer-logo .wordmark { position: absolute; left: 40.52px; top: 6.19px; width: 82.55px; height: 19.66px; }
+footer .links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  font-size: 11px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+}
+footer .links a { color: inherit; text-decoration: none; }
+footer .links a:hover { text-decoration: underline; }
+
+@media (max-width: 860px) {
+  .legal-wrap { padding: 0 16px; }
+  .logo { margin-top: 50px; }
+  h1 { font-size: 44px; margin-top: 50px; }
+  .legal-content { margin-top: 36px; }
+
+  footer { padding: 40px 16px; }
+  footer .credits {
+    flex-direction: column;
+    gap: 39px;
+    align-items: center;
+  }
+  footer .credits { flex-direction: column-reverse; }
+  footer .links { width: 100%; justify-content: space-between; gap: 0; }
+}
