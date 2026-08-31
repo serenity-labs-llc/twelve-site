@@ -68,6 +68,12 @@ h1 {
 
 .intro { font-size: 16px; line-height: 22px; }
 .intro p + p { margin-top: 22px; }
+.intro a.email-link { color: inherit; text-decoration: underline; }
+
+/* Contact page: pin footer to bottom on short content */
+body { min-height: 100vh; display: flex; flex-direction: column; }
+main.legal-wrap { flex: 1 0 auto; width: 100%; }
+footer { flex-shrink: 0; width: 100%; }
 
 section { display: flex; flex-direction: column; gap: 20px; }
 section h2 { font-weight: 500; font-size: 24px; line-height: 1; }
