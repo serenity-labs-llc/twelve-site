@@ -54,6 +54,8 @@
       position: relative;
       min-height: 100vh;
       overflow: hidden;
+      max-width: 1440px;
+      margin: 0 auto;
     }
 
     /* Logo — top 70 / left 72, 156x40 */
@@ -147,14 +149,15 @@
       width: auto;
     }
 
-    /* iPhone — pinned bottom-right, overflowing edges.
-       PNG (Jon's asset) includes a baked soft shadow spilling down-right;
-       box is sized so the PHONE BODY renders 368px wide with its right
-       edge 99px from the viewport edge, matching the Figma placement. */
+    /* iPhone — right side, vertically centered on the DEVICE BODY.
+       The asset bakes a down-right shadow: the phone body's vertical
+       center sits at 43.2% of image height (not 50%), so translateY
+       compensates to center the visible device in the viewport. */
     .phone {
       position: absolute;
       right: 24px;
-      bottom: 3px;
+      top: 50%;
+      transform: translateY(-43.2%);
       height: min(932px, 92vh);
       aspect-ratio: 1400 / 2426;
       pointer-events: none;
